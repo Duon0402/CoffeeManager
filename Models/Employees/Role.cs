@@ -9,6 +9,6 @@ namespace CoffeeManager.Models.Employees
 {
     public class Role : IdentityRole<int>
     {
-        public 
+        public ICollection<EmpRole> EmpRoles { get; set; }
     }
 }
