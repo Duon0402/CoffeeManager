@@ -1,16 +1,14 @@
 ﻿using CoffeeManager.Models.Employees;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoffeeManager.Models
 {
     public class Order
     {
-
+        public string Id { get; set; }
+        public DateTime OrderDate { get; set; }
+        public PaymentMethod PaymentMethod { get; set; }
+        public Employee Employee { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
+        public decimal TotalAmount => OrderDetails.Sum(i => i.TotalPrice);
     }
 }

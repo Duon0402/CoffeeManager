@@ -5,23 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeeManager.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{StaticResource MainVM}"
+        ResizeMode="NoResize"
+        WindowStyle="None">
     <Grid>
-        <TextBlock Text="Hello" 
-                   FontSize="50"
-                   Foreground="White" MouseMove="TextBlock_MouseMove" MouseLeave="TextBlock_MouseLeave"
-                   Background="Red"
-                   Height="100"
-                   Width="auto"
-                   TextAlignment="Center" 
-                   />
-
-        <Button Height="50px"
-                Width="50px"
-                VerticalAlignment="Bottom"
-                Background="Green"
-                Foreground="White" MouseDoubleClick="Button_MouseDoubleClick">
-            Click Me!!!
-        </Button>
+        
     </Grid>
 </Window>

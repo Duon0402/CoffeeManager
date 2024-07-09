@@ -12,5 +12,7 @@ namespace CoffeeManager.Models
         public string Description { get; set; }
         public decimal UnitPrice { get; set; }
         public string ImagePath { get; set; }
+
+        public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
